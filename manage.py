@@ -74,7 +74,7 @@ def configure_views(app):
         return render_template('index.html')
 
     @app.route('/add_event', methods=['GET', 'POST'])
-    @login_required()
+    @login_required('f')
     def add_event():
         email = []
         if request.method == 'POST':
